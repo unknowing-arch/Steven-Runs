@@ -10,12 +10,10 @@ while rstart.lower() != "y" and rstart.lower() != "yes" and rstart != "sure":
     i = i + 2
     print("S t a r t   G a m e"[0:i])
     time.sleep(slt)
-    if i == 10 or i == 20 and slt == 0:
-        i = i + 2
-        if i == 22: i = 0
+    if i == 10 and slt != 0: i = i + 2
     if i == 20 and slt != 0:
-        rstart = input()
-        if rstart.lower() == "qwerty": slt = 0
+        rstart = str.lower(input("\n\n.-.   .-.   .-.   .-.   .-.       .-.   .-.   .  .   .-. \n`-.    |    |-|   |(     |        |..   |-|   |\/|   |-  \n`-'    '    ` '   ' '    '        `-'   ` '   '  `   `-'\n"))
+        if rstart == "qwerty": slt = 0
         else: i = 0
 print(" you wake up one day.\n in fact your brother annoyingly shuk you awake\n you will be grumpy for the rest of the day.\n you decide that you should run away\n you have a choice between a sword, a magical rock, and a magical staff\n object: [sword] [rock] [staff]")
 item = "nothing"
